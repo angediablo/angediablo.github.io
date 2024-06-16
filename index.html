@@ -1143,18 +1143,18 @@
                     }
                 } else if (input.validity.tooShort) {
                     if (input.name === 'first_name') {
-                        errorMessage = 'Le prénom doit avoir au moins 2 caractères.';
+                        errorMessage = 'Veuillez entrer un prénom valide d\'au moins 2 caractères.';
                     } else if (input.name === 'last_name') {
-                        errorMessage = 'Le nom doit avoir au moins 2 caractères.';
+                        errorMessage = 'Veuillez entrer un nom valide d\'au moins 2 caractères.';
                     } else if (input.name === 'phone') {
-                        errorMessage = 'Veuillez entrer un numéro de téléphone valide d\'au moins 10 chiffres.';
+                        errorMessage = 'Veuillez entrer un numéro de téléphone valide d\'au moins 10 chiffres sans espace incluant le code pays.';
                     }
                 } else if (input.validity.patternMismatch) {
                     if (input.name === 'phone') {
-                        errorMessage = 'Veuillez entrer un numéro de téléphone valide d\'au moins 10 chiffres.';
+                        errorMessage = 'Veuillez entrer un numéro de téléphone valide d\'au moins 10 chiffres sans espace incluant le code pays.';
                     }
                 } else if (input.validity.tooLong) {
-                    errorMessage = 'Votre message est trop long.';
+                    errorMessage = 'Votre message est trop long. Il ne peut contenir plus de 500 caractères';
                 }
 
                 // Ajout de la validation personnalisée pour le champ email
